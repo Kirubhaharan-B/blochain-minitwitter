@@ -15,8 +15,8 @@ Create a .env file and add your Alchemy URL and Metamask Private Key
 
 ```shell
     Enter this in your .env file
-    ALCHEMY_URL = "Enter you"       
-    WALLET_PRIVATE_KEY = "29b83de10fe1d51dd23a5a5765a1e2dd86fb513259beae1ede57d697e80c3145"
+    ALCHEMY_URL = "Enter your Alchemy URL"       
+    WALLET_PRIVATE_KEY = "Enter your Wallet Private Key"
 ```
 
 Try running some of the following tasks:
