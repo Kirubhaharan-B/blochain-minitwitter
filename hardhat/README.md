@@ -33,10 +33,15 @@ npx hardhat compile
 Type this command to Deploy the Contract
 
 ```shell
-npx hardhat run scripts/delpoy.js --network goerli
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Now your Contract is Deployed.
+
+## Copy the Token Address from the Terminal
+- Create .env file inside frontend and paste your token address
+
+REACT_APP_URL_TWITTER_FACTORY="Your Token Address"
 
 ## To Test the Contract
 

@@ -1,5 +1,15 @@
 # Getting Started with the frontend
 
+# CREATE .env File in Frontend Directory
+
+You will get the token address in the terminal after you deployed your contract so copy it 
+
+Your .env file must contain 
+
+```shell
+REACT_APP_URL_TWITTER_FACTORY="Your Token address"
+```
+
 ## Installation to be done in the frontend part
 
 In shell type

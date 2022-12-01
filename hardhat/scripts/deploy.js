@@ -7,6 +7,8 @@ async function main() {
 
   const Token = await ethers.getContractFactory("TwitterContract");
   const token = await Token.deploy();
+
+  console.log("Token address:", token.address);
 }
 
 main().catch((error) => {
