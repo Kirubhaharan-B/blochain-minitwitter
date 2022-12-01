@@ -36,7 +36,15 @@ Type this command to Deploy the Contract
 npx hardhat run scripts/delpoy.js --network goerli
 ```
 
-Now your Contract is Deployed. 
+Now your Contract is Deployed.
+
+## To Test the Contract
+
+Type this command to Deploy the Contract
+
+```shell
+npx hardhat test
+```
 
 ## To check your Contract Deployments
 ### Step 1: 
