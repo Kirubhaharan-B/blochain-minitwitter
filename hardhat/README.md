@@ -9,6 +9,11 @@ Before Getting to execute the scripts
 1. Alchemy Account
 2. Metamask wallet 
 
+# NPM Install
+
+```shell
+npm install
+```
 ## Create your Own .env File
 
 Create a .env file and add your Alchemy URL and Metamask Private Key
