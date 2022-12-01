@@ -1,5 +1,11 @@
 # Getting Started with the frontend
 
+# NPM Install
+
+```shell
+npm install
+```
+
 # CREATE .env File in Frontend Directory
 
 You will get the token address in the terminal after you deployed your contract so copy it 
