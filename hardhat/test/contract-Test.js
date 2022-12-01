@@ -75,7 +75,7 @@ describe("Twitter Contract", function () {
       const _TWEET_ID = 0;
       await expect(twitter.connect(randAddress).deleteTweet(_TWEET_ID))
         .to.emit(twitter, "DeleteTweet")
-        .withArgs(TWEET_ID);
+        .withArgs(_TWEET_ID);
     });
   });
 });
