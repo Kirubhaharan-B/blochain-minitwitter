@@ -24,7 +24,6 @@ function App() {
     try {
       const { ethereum } = window
       if (ethereum && signer) {
-       // console.log(signer,process.env.REACT_APP_URL_TWITTER_FACTORY)
         const TwitterContract = new ethers.Contract(
           process.env.REACT_APP_URL_TWITTER_FACTORY,
           Twitter.abi,
@@ -32,10 +31,8 @@ function App() {
         )
         let allTweets = await TwitterContract.getAllTweets();
         if (allTweets) {
-          console.log(allTweets);
           setAllTweets(allTweets);
         }
-        // setPosts(getUpdatedTweets(allTweets, ethereum.selectedAddress));
       } else {
         console.log("Ethereum object doesn't exist");
       }
@@ -93,7 +90,6 @@ function App() {
                       <div classname = "button" style={{width: window.innerWidth-300,justifyContent:'space-evenly',display:'flex',marginTop:10}}>
                         <Button variant="primary" onClick={async () => 
                         {
-                            console.log(process.env.REACT_APP_URL_TWITTER_FACTORY)
                             const TwitterContract = new ethers.Contract(
                             process.env.REACT_APP_URL_TWITTER_FACTORY,
                             Twitter.abi,
@@ -148,19 +144,15 @@ function App() {
                                             <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
                                             <Button variant="primary" onClick={async () => 
                                               {
-                                                  //console.log(process.env.REACT_APP_URL_TWITTER_FACTORY)
                                                   const TwitterContract = new ethers.Contract(
                                                   process.env.REACT_APP_URL_TWITTER_FACTORY,
                                                   Twitter.abi,
                                                   signer
                                                   )
-                                                  console.log(tweetTyped);
-                                                  console.log(e.id);
                                                   let tweetupdate = await TwitterContract.updateTweet(e.id,tweetTyped,e.isDeleted);
                                                   if (tweetupdate) {
                                                     toast("Tweet Update Request Sent")
                                                   }
-                                                  console.log(tweetupdate);
                                                 }}
                                              style={{width:100,height:40,backgroundColor:'skyblue',borderRadius:10,borderColor:'white',boxShadow:0}}>
                                             Done

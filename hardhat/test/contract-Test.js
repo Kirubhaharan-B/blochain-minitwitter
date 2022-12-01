@@ -34,12 +34,12 @@ describe("Twitter Contract", function () {
 
   describe("Add Tweet", function () {
     it("emit AddTweet event", async function () {
-      let tweet = {
+      let _tweet = {
         text: "My Tweet is created and added",
         isDeleted: false,
       };
 
-      await expect(await twitter.addTweet(tweet.text))
+      await expect(await twitter.addTweet(_tweet.text))
         .to.emit(twitter, "AddTweet")
         .withArgs(myAddress.address, TOTAL_TWEETS);
     });
@@ -59,23 +59,21 @@ describe("Twitter Contract", function () {
 
   describe("UPDATE TWEET FUNCTION", function () {
     it("update tweet functionality check", async function () {
-      const tweetId = 6;
-      const tweetContent = "Say hello to this edited tweet";
+      const _tweetId = 6;
+      const _tweetContent = "Say hello to this edited tweet";
       await expect(
         // eslint-disable-next-line prettier/prettier
-        await twitter.connect(randAddress).updateTweet(tweetId, tweetContent, false),
+        await twitter.connect(randAddress).updateTweet(_tweetId, _tweetContent, false),
       )
         .to.emit(twitter, "TweetUpdate")
-        .withArgs(randAddress.address, tweetId, false);
+        .withArgs(randAddress.address, _tweetId, false);
     });
   });
 
   describe("Delete Tweet", function () {
     it("delete tweet event", async function () {
-      const TWEET_ID = 0;
-      const TWEET_DELETED = true;
-
-      await expect(twitter.connect(randAddress).deleteTweet(TWEET_ID))
+      const _TWEET_ID = 0;
+      await expect(twitter.connect(randAddress).deleteTweet(_TWEET_ID))
         .to.emit(twitter, "DeleteTweet")
         .withArgs(TWEET_ID);
     });

@@ -39,10 +39,9 @@ npx hardhat run scripts/delpoy.js --network goerli
 Now your Contract is Deployed. 
 
 ## To check your Contract Deployments
-
-Step 1: 
+### Step 1: 
     Copy the Token address in terminal after you deployed it
-Step 2: 
+### Step 2: 
     Visit the Etherscan Goerli testnet and paste the Token address in there
 
 - Now you can see the status of the contract in the website 
@@ -58,7 +57,7 @@ Step 2:
 
 - npx hardhat --show-stack-traces clean
 
-## Now Read the Read.me file in frontend to execute the frontend of twitter
+## Now Read the Read.md file in frontend to execute the frontend of twitter
 
 
 
